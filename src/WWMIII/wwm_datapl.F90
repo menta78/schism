@@ -903,6 +903,9 @@
          INTEGER                :: MESBF = 1
          INTEGER                :: MESTR = 1
          INTEGER                :: MESCU = 0
+! menta
+         INTEGER                :: MEUOST = 0
+!!!!!!!!!!!!!!!!!!!!
          INTEGER                :: ICRIT = 1
          INTEGER                :: IBREAK = 1
          INTEGER                :: IFRIC = 1
