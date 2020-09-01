@@ -60,8 +60,8 @@
 
 
       TYPE SGRD
-        INTEGER                 :: NTH, NK
-        REAL(rkind), POINTER    :: TH(:), COSTH(:), SINTH(:)
+        INTEGER                  :: NTH, NK
+        REAL(rkind), ALLOCATABLE :: TH(:), COSTH(:), SINTH(:)
       END TYPE SGRD
 
   
@@ -148,7 +148,8 @@
       SGD => SRCTRM%SGD
       SGD%NK = MSC
       SGD%NTH = MDC
-      SGD%TH = TH
+      ALLOCATE(SGD%TH(MDC), SGD%COSTH(MDC), SGD%SINTH(MDC))
+      SGD%TH = SPDIR
       SGD%COSTH = COSTH
       SGD%SINTH = SINTH
   
