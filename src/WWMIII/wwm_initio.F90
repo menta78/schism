@@ -690,7 +690,7 @@
       ENDIF
 
 ! menta
-      IF ( MEUOST .GT. 0) THEN
+      IF ( MESUO .GT. 0) THEN
         CALL UOST_INIT
       ENDIF
 !!!!!!!!!!!!!!!!!!!
