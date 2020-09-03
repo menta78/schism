@@ -475,6 +475,9 @@
 #ifdef ST42
       USE W3SRC4MD
 #endif
+! menta
+      USE W3UOSTMD
+!!!!!!!!!!!!!!!!!!!!!!!!
       IMPLICIT NONE
 !
       INTEGER        :: i, j, IP
@@ -685,6 +688,12 @@
         CALL PREPARE_ARDHUIN
 #endif
       ENDIF
+
+! menta
+      IF ( MESUO .GT. 0) THEN
+        CALL UOST_INIT
+      ENDIF
+!!!!!!!!!!!!!!!!!!!
       
       WRITE(STAT%FHNDL,'("+TRACE...",A)') 'SET THE INITIAL WAVE BOUNDARY CONDITION'
       FLUSH(STAT%FHNDL)
