@@ -299,26 +299,34 @@
 !        WRITE(5001,*) 'FTE, FTF, FACHF, FACHFE'
 !        WRITE(5001,*) FTE, FTF, FACHF, FACHFE
 
-        SSWELLF(1) = 0.8_rkind
+       ! menta
+       !SSWELLF(1) = 0.8_rkind
+        SSWELLF(1) = 0.66_rkind
         SSWELLF(2) = -0.018_rkind
-        SSWELLF(3) = 0.015_rkind
-        SSWELLF(4) = 1.E5
+       !SSWELLF(3) = 0.015_rkind
+        SSWELLF(3) = 0.022_rkind
+       !SSWELLF(4) = 1.E5
+        SSWELLF(4) = 1.5E5
         SSWELLF(5) = 1.2
         SSWELLF(6) = 0._rkind
-        SSWELLF(7) = 0._rkind
+       !SSWELLF(7) = 0._rkind
+        SSWELLF(7) = 3.6E5_rkind
 
 !        WRITE(5001,*) 'SSWELLF'
 !        WRITE(5001,*) SSWELLF
 
         AALPHA = 0.0095_rkind
-        BBETA  = 1.54_rkind ! 1.54 for ECMWF
+       ! menta: set like in WW3 for CFSR
+       !BBETA  = 1.54_rkind ! 1.54 for ECMWF
+        BBETA = 1.33_rkind
         ZZALP   = 0.006_rkind
         ZZWND   = 10._rkind
 
         SWELLFPAR = 1
 
         SSDSBRF1   = 0.5_rkind
-        SSDSHCK    = 1._rkind
+       !SSDSHCK    = 1._rkind
+        SSDSHCK    = 1.5_rkind
         SSDSBCK    = 0._rkind
         SSDSBINT   = 0.3_rkind
         SSDSPBK    = 4._rkind
@@ -336,16 +344,24 @@
         SSDSISO     = 2
 
         SSDSBM(0)  = 1.
-        SSDSBM(1)  = 02428._rkind
-        SSDSBM(2)  = 1.995_rkind
-        SSDSBM(3)  = -2.5709_rkind
-        SSDSBM(4)  = 1.3286_rkind
+       !SSDSBM(1)  = 02428._rkind
+        SSDSBM(1)  = 0
+       !SSDSBM(2)  = 1.995_rkind
+        SSDSBM(2)  = 0
+       !SSDSBM(3)  = -2.5709_rkind
+        SSDSBM(3)  = 0
+       !SSDSBM(4)  = 1.3286_rkind
+        SSDSBM(4)  = 0
 
-        ZZ0MAX     = 0.002_rkind
+       !menta
+       !ZZ0MAX     = 0.002_rkind
+        ZZ0MAX     = 0.0_rkind
         SSINTHP    = 2.0_rkind
         SSWELLFPAR = 3
 
-        TTAUWSHELTER = 1.0_rkind
+       !menta
+       !TTAUWSHELTER = 1.0_rkind
+        TTAUWSHELTER = 0.3_rkind
         ZZ0RAT       = 0.04_rkind
 
         SSDSC1 = 0._rkind
@@ -355,9 +371,12 @@
         SSDSC5 = 0._rkind
         SSDSC6 = 0.30_rkind
 
-        WHITECAPWIDTH = 0.8_rkind
+       !WHITECAPWIDTH = 0.8_rkind
+        WHITECAPWIDTH = 0.3_rkind
 
-        SSDSCUM = -0.40344_rkind
+       !menta
+       !SSDSCUM = -0.40344_rkind
+        SSDSCUM = -0.4_rkind
         SSDSDTH = 80._rkind ! not used ...
         SSDSCOS = 2._rkind
         SSDSISO = 2 !AR: changes to isotropic breaking ...

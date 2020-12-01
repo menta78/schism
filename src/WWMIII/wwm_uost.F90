@@ -802,14 +802,16 @@
       ! computing IMATDA and IMATRA.
       ! Doing the same as done in wwm_dissipation.F90
       ! and in wwm_friction.F90
-      IF (ICOMP .GE. 2) THEN
-        ! computing the matrices integrated semi-implicit using Patankar rules and linearized st as in Swan
-         IMATDA = IMATDA - D
-      ELSE IF (ICOMP .LT. 2) THEN
-        ! computing the matrices a la ww3
-         IMATDA = IMATDA + D
-         IMATRA = IMATRA + S
-      ENDIF
+     !IF (ICOMP .GE. 2) THEN
+     !  ! computing the matrices integrated semi-implicit using Patankar rules and linearized st as in Swan
+     !   IMATDA = IMATDA - D
+     !ELSE IF (ICOMP .LT. 2) THEN
+     !  ! computing the matrices a la ww3
+     !   IMATDA = IMATDA + D
+     !   IMATRA = IMATRA + S
+     !ENDIF
+      IMATDA = IMATDA + D
+      IMATRA = IMATRA + S
       END SUBROUTINE UOST_SOURCETERM_COMPUTE
   
   
